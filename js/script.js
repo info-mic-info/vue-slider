@@ -8,6 +8,7 @@ createApp({
     data() {
         return {
             activeImage: 0,
+            title: "Ciao, questo è un titolo di test",
 
             slides: [
                 {
@@ -37,4 +38,4 @@ createApp({
     methods: {
 
     },
-}).mount('app')
+}).mount('#app')
