@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: solid 1px black; */
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider{
+    width: 50vw;
+    height: 50vh;
+    position:relative;
+}
+
+.item{
+    display: none;
+    position: relative;
+}
+
+.item-slider, .item, img{
+    height: 100%
+}
+
+.item img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.arrow{
+    position: absolute;
+    width: 40px;
+    background-color: rgba(174, 174, 174, 0.509);
+    border-radius: 50px;
+    font-weight: 800; 
+    left: 50%;
+    font-size: 30px;
+    transform: translateX(-50%);
+    text-align: center;
+    cursor: pointer;
+}
+
+.next{
+    top: 5px; 
+}
+
+.prev{
+    bottom: 5px;
+}
+
+.prev:hover, .next:hover{
+    background-color: rgba(174, 174, 174, 1);   
+}
+
+.item.active{
+    display: block;
+}
+
+.circles-container{
+    display: flex;
+    justify-content: center;
+}
+
+.circle{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(174, 174, 174, 0.509);
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+.circle.active, .circle:hover{
+    background-color: rgba(174, 174, 174, 1); 
+}
+
+
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.circle-button{
+    border-radius: 100%;
+    padding:  10px 10px;
+    font-size: 30px;
+    border: none;
+    margin: 10px;
+    transition: 0.35s;
+}
+
+.circle-button#play{
+    background-color: green;
+    color: white;
+}
+
+.circle-button#pause{
+    background-color: orange;
+    color: white;
+}
+
+.circle-button#play:hover{
+    background-color: darkgreen;
+    color: white;
+}
+
+.circle-button#pause:hover{
+    background-color: darkorange;
+    color: white;
+}
+
+
+.desc{
+    position: absolute;
+    right: 0;
+    bottom: 0; 
+    color: white;
+    text-align: right;
+}
+
+
