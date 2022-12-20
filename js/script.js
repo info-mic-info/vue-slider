@@ -8,7 +8,6 @@ createApp({
     data() {
         return {
             activeImage: 0,
-            title: "Ciao, questo è un titolo di test",
 
             slides: [
                 {
@@ -36,6 +35,20 @@ createApp({
         }
     },
     methods: {
-
-    },
+        changeImage(index) {
+            this.activeImage = index;
+        },
+        Next() {
+            this.activeImage++
+            if(this.activeImage > this.slides.length - 1){
+                this.activeImage= 0
+            }
+        },
+        Prev() {
+            this.activeImage--
+            if(this.activeImage < 0){
+                this.activeImage= this.slides.length - 1
+            }
+        }
+    }
 }).mount('#app')
